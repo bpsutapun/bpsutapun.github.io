@@ -10,7 +10,7 @@ header {
   align-items: center;
 }
 
-body a{
+body a#skip{
   text-decoration: none;
 }
 
