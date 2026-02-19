@@ -1,0 +1,94 @@
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #dedede;
+    padding: 5px;
+    margin: 15px;
+    font-size: 25px;
+    font-family:Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-family:Arial, sans-serif;
+    font-size: 1.95em;
+}
+
+h2{
+    text-align:center;
+  }
+
+li{
+    margin-top: 20px;
+}
+
+img{
+    width: 100%;
+  }
+
+figure{
+    border: 5px solid blue;
+    border-radius: 0%;
+    overflow: hidden;
+  }
+
+figcaption{
+    text-align: center;
+    font-size: large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior: auto !important;
+    }
+}
+
+@media (prefers-color-scheme: dark){
+    figure{
+        border: solid black;
+        background-color: black;
+    }
+    figcaption{
+        color: yellow;
+    }
+}
+
+@media screen and (min-width: 772px){
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid figure:last-child {
+        grid-column: 1 / span 2;
+    }
+    figure{
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    figure img{
+        height: 70%;
+        object-position: center;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid figure:nth-child(3n) {
+        grid-column: 1 / span 2;
+    }
+    figure{
+        border-radius: 0%;
+        overflow: hidden;
+    }
+    figure img{
+        border-radius: 0%;
+        height: 85%;
+        object-position: center;
+    }
+}
+
